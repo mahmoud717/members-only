@@ -1,0 +1,12 @@
+<h5 class="mt-4 mb-2">post about it! </h5>
+<%= simple_form_for(@post) do |f| %>
+<%= f.error_notification %>
+<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+<div class="form-inputs mb-3">
+    <%= f.input :post, label: false, placeholder: "create a new post...", class: "my-3", input_html: {class: "textarea "} ,label_html: {class: "h6 my-3" } %>
+</div>
+<div class="form-actions">
+    <%= f.button :submit , class: "btn btn-info text-white"%>
+</div>
+<% end %>

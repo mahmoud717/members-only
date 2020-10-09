@@ -48,8 +48,6 @@ end
 
 group :development do
   gem 'better_errors', '~> 2.8', '>= 2.8.3'
-  gem 'guard', '~> 2.16', '>= 2.16.2'
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
@@ -70,7 +68,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Commands to run 
-# 1- guard init livereload => for live-reload
 # 2- rails generate simple_form:install --bootstrap => for simple forms 
 # 3- rails g devise:install => for devise
 # 4- rails g devise:views => for devise views

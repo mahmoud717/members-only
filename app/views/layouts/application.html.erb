@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TemplateApp</title>
+
+<head>
+    <title>Members Only</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <%= stylesheet_link_tag "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+</head>
 
-  <body>
-   <%= if flash[:notice] %>
-      <p class="notice"><%= notice %></p>
-   <% end %>
-   <%= if flash[:alert] %>
-      <p class="alert"><%= alert %></p>
-   <% end %>
-    <%= yield %>
-  </body>
+<body>
+    <%if flash[:notice] %>
+    <p class="notice alert alert-primary mb-0 text-center"><%= notice %></p>
+    <% end %>
+    <% if flash[:alert] %>
+    <p class="alert"><%= alert %></p>
+    <% end %>
+    <section class="main">
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning  justify-content-between">
+            <div class="container">
+                <%= link_to  "Members Only", posts_path , class: "navbar-brand text-white"%>
+                <div class="nav-right">
+                    <%if user_signed_in?%>
+                    <%= link_to  "Sign out", destroy_user_session_path , method: :delete , class: "button btn btn-light text-info" %>
+                    <%= link_to current_user.name , edit_user_registration_path , class: "btn"%>
+                    <% else %>
+                    <%= link_to  "Sign in", new_user_session_path , class: "button btn btn-light text-info" %>
+                    <% end %>
+                </div>
+            </div>
+        </nav>
+        <div class="container col-6 mt-4">
+            <%= yield %>
+        </div>
+    </section>
+</body>
+
+
 </html>
