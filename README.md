@@ -13,6 +13,8 @@ In this project, we build an exclusive clubhouse where our members can write emb
 - <code>cd members-only</code>
 - <code>$ bundle install</code>
 
+- you can visit the site through this link https://members-only-717.herokuapp.com/
+
 ## Run Test <a name = "Testing"></a>
 - Rspec :heavy_check_mark:
 - $ rspec
@@ -22,7 +24,7 @@ In this project, we build an exclusive clubhouse where our members can write emb
 👤 **Mahmoud-mohammad**
 
 - Github: [@githubhandle](https://github.com/mahmoud717)
-- Linkedin: [GurbuzErtunga](https://www.linkedin.com/in/gurbuz-ertunga-a607a2a5/)
+- Linkedin: [@linkedinhandle](https://www.linkedin.com/in/mahmoud-m-abbas/)
 
 ## 🤝 Contributing
 
