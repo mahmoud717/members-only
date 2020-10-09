@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit destroy]
-  befor_action :authenticate_user! , only:[:new , :create]
+  before_action :authenticate_user! , only:[:new , :create]
 
   # GET /posts
   # GET /posts.json
