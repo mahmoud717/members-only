@@ -9,18 +9,6 @@ class PostsController < ApplicationController
     @post = current_user.posts.build if user_signed_in?
     @users = User.all
   end
-
-  # GET /posts/1
-  # GET /posts/1.json
-  def show; end
-
-  # GET /posts/new
-  def new 
-  end
-
-  # GET /posts/1/edit
-  def edit; end
-
   # POST /posts
   # POST /posts.json
   def create
