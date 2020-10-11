@@ -9,6 +9,10 @@ class PostsController < ApplicationController
     @post = current_user.posts.build if user_signed_in?
     @users = User.all
   end
+
+  def new
+    @post = Post.new
+  end
   # POST /posts
   # POST /posts.json
   def create
