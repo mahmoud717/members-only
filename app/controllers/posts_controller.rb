@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @post = current_user.posts.build if user_signed_in?
-    @users = User.all
+
   end
 
   def new

@@ -1,21 +1,11 @@
 <div class="container">
-    <%if @posts.count == 0 && !user_signed_in? %>
-    <h3 class="mt-5 text-center"> There are no posts right now!!</h3>
-    <%end %>
+    <%= no_posts_tag%>
     <%= render "form" if user_signed_in? %>
     <% @posts.each do |post| %>
     <div class="media">
-        <% if user_signed_in? %>
-        <div class="profile-image">
-            <%= gravatar_image_tag(post.user.email , alt: post.user.name) %>
-        </div>
-        <%end %>
+        <%= profile_image_tag(post)%>
         <div class="post">
-            <% if user_signed_in? %>
-            <strong>
-                <%=post.user.name.capitalize!%>
-            </strong><br>
-            <%end %>
+            <%=username_tag(post)%>
             <p class="py-3"><%=post.post%></p>
         </div>
     </div>
