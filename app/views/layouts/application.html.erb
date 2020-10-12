@@ -11,12 +11,7 @@
 </head>
 
 <body>
-    <%if flash[:notice] %>
-    <p class="notice alert alert-primary mb-0 text-center"><%= notice %></p>
-    <% end %>
-    <% if flash[:alert] %>
-    <p class="alert"><%= alert %></p>
-    <% end %>
+    <%= alert_tag(flash)%>
     <section class="main">
         <nav class="navbar navbar-expand-lg navbar-light bg-warning  justify-content-between">
             <div class="container">
@@ -27,6 +22,8 @@
                     <%= link_to current_user.name , edit_user_registration_path , class: "btn"%>
                     <% else %>
                     <%= link_to  "Sign in", new_user_session_path , class: "button btn btn-light text-info" %>
+                    or
+                    <%= link_to  "Sign up", new_user_registration_path , class: "button btn btn-light text-info" %>
                     <% end %>
                 </div>
             </div>
